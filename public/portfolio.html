@@ -678,6 +678,13 @@ var ldIv=setInterval(function(){
   if(pct>57&&mi<2){mi=2;ldMsg.textContent=msgs[2]}
 },60);
 
+/* ── PROJECT NAVIGATION ─────────────────── */
+function navigateToProject(path) {
+  // Detect base path dynamically
+  var basePath = window.location.pathname.replace(/\/portfolio\.html$/, '').replace(/\/$/, '');
+  window.location.href = basePath + '/' + path;
+}
+
 /* ── HERO NAME LETTERS ─────────────────── */
 (function(){
   var lines=['SAI KIRAN','PUTTA V.V'];
